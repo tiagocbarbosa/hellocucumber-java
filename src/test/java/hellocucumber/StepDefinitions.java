@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class IsItFriday {
     static String isItFriday(String today) {
-        return null;
+        return "Nope";
     }
 }
 
