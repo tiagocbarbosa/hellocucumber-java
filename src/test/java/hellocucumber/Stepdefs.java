@@ -7,23 +7,20 @@ import io.cucumber.java.en.When;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class IsItFriday {
+
     static String isItFriday(String today) {
         return "Friday".equals(today) ? "TGIF" : "Nope";
     }
 }
 
-public class StepDefinitions {
+public class Stepdefs {
+
     private String today;
     private String actualAnswer;
 
-    @Given("today is Sunday")
-    public void today_is_Sunday() {
-        today = "Sunday";
-    }
-
-    @Given("today is Friday")
-    public void todayIsFriday() {
-        today = "Friday";
+    @Given("today is {string}")
+    public void today_is(String today) {
+        this.today = today;
     }
 
     @When("I ask whether it's Friday yet")
